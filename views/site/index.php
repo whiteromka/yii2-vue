@@ -11,8 +11,10 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <?= VueWidget::widget([
-            'component' => 'hello-component',
-            'props' => ['msg' => 'Yeah!!!!!!!!']
+            'component' => 'base-component',
+            'props' => [
+                'message' => 'a1a1a1a',
+            ]
     ]); ?>
 
 </div>

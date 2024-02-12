@@ -1,5 +1,5 @@
-import Vue from  '../node_modules/vue/dist/vue.common';
-import HelloComponent from "@/components/HelloComponent"
+import Vue from  '../node_modules/vue/dist/vue.common'
+import BaseComponent from "@/components/BaseComponent"
 
 window.Vue = Vue;
-window.Vue.component('hello-component', HelloComponent)
+window.Vue.component('base-component', BaseComponent)

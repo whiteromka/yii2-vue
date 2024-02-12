@@ -1,17 +1,13 @@
 <template>
     <div>
-      <h1>{{ msg }}</h1>
-      <p>This is vue component!</p>
-      <span>#!&^</span>
+      <h1>!!!!!!</h1>
+      <h2>fgdgd</h2>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloComponent',
-  props: {
-    msg: String
-  }
+  name: 'TestComponent'
 }
 </script>
 
