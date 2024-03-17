@@ -298,3 +298,42 @@ body {
 
     100% {opacity: 1; background: rgba(46,44,11,0.39);}
 }
+
+
+/* Border ani */
+/*html {*/
+/*    height: 100%;*/
+/*    background: #223;*/
+/*    display: grid;*/
+/*    place-items: center;*/
+/*}*/
+.box-border-ani {
+   /* width: 60vmin;
+    height: 50vmin;*/
+    display: grid;
+    place-content: center;
+    color: white;
+    text-shadow: 0 1px 0 #000;
+    --border-angle: 0turn;
+    --main-bg: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%);
+    border: solid 1px transparent;
+    border-radius: 0;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+    background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+    background-position: center center;
+    animation: bg-spin 3s linear infinite;
+}
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+.box-border-ani:hover {
+    animation-play-state: paused;
+}
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+

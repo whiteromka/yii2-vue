@@ -44,6 +44,7 @@
                                             <p class="rom-txt2" v-html="hello.myData.txt2"></p>
                                             <p class="rom-txt3" v-html="hello.myData.txt3"></p>
                                         </div>
+                                        <div class="vertical-label box-border-ani"> Teacher </div>
                                         <div class="myPhoto-wrap">
                                             <img :src="hello.pic" class="img-fluid cyber-glitch-0_ myPhoto" :alt="hello.myData.name">
                                         </div>
@@ -123,7 +124,7 @@
                                             <p class="perc-txt2" v-show="itemTextTimer.t2"> {{ item.txt2 }} </p>
                                             <p class="perc-txt3" v-show="itemTextTimer.t3"> {{ item.txt3 }} </p>
                                         </div>
-                                        <div class="vertical-label">{{ item.label }}</div>
+                                        <div class="vertical-label box-border-ani">{{ item.label }}</div>
                                         <img :src="item.pic" class="img-fluid" :alt="item.ru">
                                     </div>
                                     <a class="perc-btn" :href="item.link">
@@ -191,35 +192,7 @@
                 </DisplayComponent>
                 <br><br><br><br>
             </div>
-
-            <!-- FAQ  -->
-<!--            <div>-->
-<!--                <div style="max-width: 1280px; margin: auto">-->
-<!--                    <h1 class="cyber-h mw-450 f-tektur"> FAQ</h1>-->
-<!--                    <DisplayComponent-->
-<!--                            class="mb-90 brackets-wrap-no-active"-->
-<!--                            :is-header="true"-->
-<!--                            :color="'blue'"-->
-<!--                    >-->
-<!--                    <div class="bracket bracket-tl" style="top: 7px"></div>-->
-<!--                    <div class="bracket bracket-tr" style="top: 7px"></div>-->
-<!--                    <div class="bracket bracket-bl" style="bottom: 2px"></div>-->
-<!--                    <div class="bracket bracket-br" style="bottom: 2px"></div>-->
-<!--                        <div class="faq-wrap">-->
-<!--                            <div class="faq-item" v-for="(item, i) in hello.faq" :key="i">-->
-<!--                                <p class="question">-->
-<!--                                    <span>Q: </span>-->
-<!--                                    <span v-html="item.q"></span>-->
-<!--                                </p>-->
-<!--                                <p class="answer">-->
-<!--                                    <span>A: </span>-->
-<!--                                    <span v-html="item.a"></span>-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </DisplayComponent>-->
-<!--                </div>-->
-<!--            </div>-->
+            
 
             <!--  footer-wrap-marquee -->
             <div class="footer-wrap-marquee mb-40">

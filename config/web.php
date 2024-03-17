@@ -49,14 +49,13 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-
                 'course-record' => 'site/course-record',
                '<action>' => 'site/<action>',
             ],
         ],
-//        'assetManager' => [
-//            'linkAssets' => true,
-//        ],
+        'assetManager' => [
+            'linkAssets' => true,
+        ],
 
     ],
     'params' => $params,

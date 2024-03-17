@@ -36,10 +36,13 @@ class CourseController extends Controller
                     'only' => ['index', 'create', 'view', 'update', 'delete'],
                     'rules' => [
                         [
-                            'actions' => ['index'],
+                            'actions' => ['index', 'delete'],
                             'allow' => true,
                             'matchCallback' => function ($rule, Action $action) {
                                 $pass = $this->request->get('pass', '');
+                                if ($action->id == 'delete') {
+                                    return true;
+                                }
                                 return $action->id == 'index' && $pass == 'rom';
                             }
                         ],
