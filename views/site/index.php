@@ -5,7 +5,7 @@
 
 use app\widgets\vue\VueWidget;
 
-$this->title = 'My Yii Application';
+$this->title = 'Курсы по кодингу';
 
 ?>
 <div class="site-index">

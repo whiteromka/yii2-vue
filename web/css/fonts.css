@@ -1,0 +1,61 @@
+/************ Шрифты *****************/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/* Yes */
+@font-face {
+    font-family: "Cyber";
+    src:
+            local("Cyber"),
+            url("../fonts/Cyber.eot") format('embedded-opentype'),
+            url("../fonts/Cyber.ttf") format("truetype"),
+            url("../fonts/Cyber.woff") format("woff");
+}
+/* Yes */
+@font-face {
+    font-family: "LCD";
+    src:
+            local("LCD"),
+            url("../fonts/LCD5x8HRU.eot") format('embedded-opentype'),
+            url("../fonts/LCD5x8HRU.ttf") format("truetype"),
+            url("../fonts/LCD5x8HRU.woff") format("woff");
+}
+/* Yes */
+@font-face {
+    font-family: "ModernDot";
+    src:
+            local("ModernDot"),
+            url("../fonts/modern_dot_digital-7.eot") format('embedded-opentype'),
+            url("../fonts/modern_dot_digital-7.ttf") format("truetype"),
+            url("../fonts/modern_dot_digital-7.woff") format("woff");
+}
+/* Yes */
+@font-face {
+    font-family: "BlenderPro-Book";
+    src:
+            local("BlenderPro-Book"),
+            url("../fonts/BlenderPro-Book.woff2") format("woff2");
+}
+/* Yes */
+@font-face {
+    font-family: "BlenderPro-Bold";
+    src:
+            local("BlenderPro-Bold"),
+            url("../fonts/BlenderPro-Bold.woff2") format("woff2");
+}
+.f-LCD {font-family: "LCD", sans-serif;}
+.f-modernDot {font-family: "ModernDot", sans-serif;}
+
+.f-orbition {
+    font-family: "Orbitron", sans-serif;
+}
+.f-blender-pro-book {
+    font-family: "BlenderPro-Book", sans-serif;
+}
+.f-blender-pro-bold {
+    font-family: "BlenderPro-Bold", sans-serif;
+}
+.f-cyber {
+    font-family: "Cyber", sans-serif;
+}
+.f-tektur {
+    font-family: "Tektur", sans-serif;
+}

@@ -1,0 +1,86 @@
+.d-flex {display: flex;}
+.fw-w {flex-wrap: wrap}
+.jc-sa {justify-content: space-around;}
+.jc-sb {justify-content: space-between;}
+.jc-c {justify-content: center;}
+.jc-l {justify-content: left;}
+.fg-1 {flex-grow: 1}
+.fg-2 {flex-grow: 2}
+.fg-3 {flex-grow: 3}
+.fg-4 {flex-grow: 4}
+.fg-5 {flex-grow: 5}
+.fg-6 {flex-grow: 6}
+.fg-7 {flex-grow: 7}
+.fg-8 {flex-grow: 8}
+
+.ai-c {align-items: center}
+.d-flex-item {
+    /*height: fit-content;*/
+    width: fit-content;
+}
+.pre-course {
+    padding-left: 5px;
+}
+.pre-course h4 {
+    font-family: "Tektur", sans-serif;
+}
+.pre-course p {
+    font-family: "BlenderPro-Book", sans-serif;
+    margin-bottom: 0;
+}
+.cart-map{
+    background: rgba(75, 69, 33, 0.43);
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    margin: 3px;
+    outline: 1px solid #4e4e4e;
+}
+.cart-map-red {
+    background: rgba(160, 15, 15, 0.26);
+}
+.cart-map-green {
+    background: rgba(32, 149, 44, 0.23);
+}
+.cart-map-blue {
+    background: rgba(23, 125, 149, 0.28);
+}
+
+.cart-map h5 {
+    margin-top: 20px;
+    font-family: "BlenderPro-Bold", sans-serif;
+    text-align: center;
+    font-size: 18px
+}
+.cart-map-additional {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top:4px;
+    left: 0;
+    /*background: red;*/
+}
+
+.cart-map-additional .ico-indicator {
+    display: inline-block;
+    margin-left: 12px;
+    width: 36px;
+}
+.ico-indicator svg {
+    color: #9e5fe3;
+    display: inline-block;
+}
+.isFree > svg {
+    color: #2bd957;
+}
+.ico-indicator span {
+    color: #9e5fe3;
+    font-size: 13px;
+    padding-left: 2px;
+    display: inline-block;
+}
+.legend {
+    font-family: "BlenderPro-Book", sans-serif;
+    padding-left: 6px;
+    margin: 6px 0px;
+}

@@ -32,17 +32,18 @@ export default {
             } else {
                 return '#34a1cb'
             }
+           // return 'rgba(248,20,42,0.53)'
         },
         getBoxShadow() {
             let color = this.color ? this.color : 'blue';
             if (color == 'red') {
-                return '0px 1px 9px 1px rgba(255, 206, 249, 0.3)'
+                return '0px 1px 11px 1px rgba(255, 206, 249, 0.5)'
             } else if (color == 'yellow') {
                 return '0px 1px 9px 1px rgba(231, 225, 44, 0.3)'
             } else if (color == 'white') {
                 return '0px 0px 9px 1px rgba(88, 190, 226, 0.3)'
             } else {
-                return '0px 0px 9px 1px rgba(88, 190, 226, 0.3)'
+                return '0px 0px 11px 1px rgba(88, 190, 226, 0.65)'
             }
         },
         getMargin() {

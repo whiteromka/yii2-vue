@@ -3,9 +3,11 @@
         <div v-if="isHeader"
              class="displayHeader"
              :class="{redHeader: isRed, blueHeader: isBlue, yellowHeader: isYellow}"
-             :style="{margin: getHeaderPosition}"></div>
+             :style="{margin: getHeaderPosition}"
+        >
+        </div>
         <LineComponent :color="color"></LineComponent>
-        <div class="display"
+        <div class="display drop-chars"
             :class="{displayRed: isRed, displayBlue: isBlue, displayYellow: isYellow, displayWhite: isWhite}"
         >
             <slot></slot>
@@ -51,19 +53,16 @@ export default {
 </script>
 
 <style scoped>
-    * {
-        color: white;
-    }
     .display {
-        min-height: 400px;
-        padding: 12px;
+        min-height: 200px;
+        padding: 1px;
     }
     .displayRed {
-        background: rgba(131, 82, 221, 0.05);
+        background: rgba(219, 36, 146, 0.06);
         /*background: linear-gradient(315deg, rgba(131, 82, 221, 0.1), rgba(239, 127, 212, 0.05));*/
     }
     .displayYellow {
-        background: rgba(221, 182, 82, 0.05);
+        background: rgba(221, 182, 82, 0.11);
         /*background: linear-gradient(315deg, rgba(172, 147, 72, 0.11), rgba(239, 219, 121, 0.05));*/
     }
     .displayBlue {

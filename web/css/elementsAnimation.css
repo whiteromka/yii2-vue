@@ -1,0 +1,300 @@
+body {
+    --color-bracket: #fed33f;
+    --color-bracket-blue: #44caff;
+}
+.bracket {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 60;
+    transition: all 0.1s  0.0s;
+    opacity: 1;
+}
+.br-o2 { opacity: 0.2;}
+.bracket-blue-tl {
+    border-top: 1px solid var(--color-bracket-blue);
+    border-left: 1px solid var(--color-bracket-blue);
+    top: 0;
+    left: 0;
+}
+.bracket-blue-tr {
+    border-top: 1px solid var(--color-bracket-blue);
+    border-right: 1px solid var(--color-bracket-blue);
+    top: 0;
+    right: 0;
+}
+.bracket-blue-bl {
+    border-bottom: 1px solid var(--color-bracket-blue);
+    border-left: 1px solid var(--color-bracket-blue);
+    bottom: 0;
+    left: 0;
+}
+.bracket-blue-br {
+    border-bottom: 1px solid var(--color-bracket-blue);
+    border-right: 1px solid var(--color-bracket-blue);
+    bottom: 0;
+    right: 0;
+}
+.bracket-tl, .bracket-tl-5 {
+    border-top: 1px solid var(--color-bracket);
+    border-left: 1px solid var(--color-bracket);
+    top: 0;
+    left: 0;
+}
+.bracket-tr, .bracket-tr-5 {
+    border-top: 1px solid var(--color-bracket);
+    border-right: 1px solid var(--color-bracket);
+    top: 0;
+    right: 0;
+}
+.bracket-bl, .bracket-bl-5 {
+    border-bottom: 1px solid var(--color-bracket);
+    border-left: 1px solid var(--color-bracket);
+    bottom: 0;
+    left: 0;
+}
+.bracket-br, .bracket-br-5 {
+    border-bottom: 1px solid var(--color-bracket);
+    border-right: 1px solid var(--color-bracket);
+    bottom: 0;
+    right: 0;
+}
+.brackets-wrap, .brackets-wrap-no-active  {
+    position: relative;
+}
+.brackets-wrap:hover .bracket-tl {
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-tr {
+    top: 10px;
+    right: 10px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-bl {
+    bottom: 10px;
+    left: 10px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-br {
+    bottom: 10px;
+    right: 10px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-tl-5 {
+    top: 3px;
+    left: 3px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-tr-5 {
+    top: 3px;
+    right: 3px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-bl-5 {
+    bottom: 3px;
+    left: 3px;
+    opacity: 1;
+}
+.brackets-wrap:hover .bracket-br-5 {
+    bottom: 3px;
+    right: 3px;
+    opacity: 1;
+}
+.cart-map-info {
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 29, 29, 0.90);
+    position: absolute;
+    z-index: 50;
+    padding: 9px;
+    top:0;
+    left:0;
+    font-size: 15px;
+    font-family: "BlenderPro-Book", sans-serif;
+    overflow: hidden;
+}
+.cart-map-info p {
+    line-height: 1.2;
+}
+
+
+/* my photo animation */
+.photo-info {
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 29, 29, 0.85);
+    position: absolute;
+    z-index: 9;
+    padding: 9px;
+    padding-left: 22px;
+    overflow: hidden !important;
+}
+.myPhoto {
+    opacity: 0.76;
+}
+.photo-info h4 {
+    font-family: "BlenderPro-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: #ecaa3f;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    opacity: 0;
+}
+.photo-info p {
+    font-family: "Play", sans-serif;
+    font-family: "BlenderPro-Book", sans-serif;
+    font-size: 15px;
+    padding-left: 40px;
+    opacity: 0;
+}
+
+
+/* rom-props animation */
+.rom-txt1, .rom-txt2, .rom-txt3 {
+    font-family: "BlenderPro-Book", sans-serif;
+    opacity: 1;
+    padding-left: 0px;
+}
+
+.rom-prop {
+    animation: rom-prop 0.2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+}
+.rom-prop1 {
+    animation: rom-prop 0.2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+}
+.rom-prop2 {
+    animation: rom-prop 0.2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 400ms;
+}
+.rom-prop3 {
+    animation: rom-prop 0.2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 600ms;
+}
+@keyframes rom-prop
+{
+    0% {opacity: 0; padding-left: 0px;}
+    100% {opacity: 1; padding-left: 15px;}
+}
+
+
+/* perc animation */
+.perc-info {
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 29, 29, 0.85);
+    position: absolute;
+    z-index: 9;
+    padding: 9px;
+    padding-left: 22px;
+    overflow: hidden;
+}
+.perc-info h4 {
+    padding-top: 15px;
+    text-align: center;
+    font-family: "Play", sans-serif;
+    font-family: "BlenderPro-Bold", sans-serif;
+    color: rgba(222, 192, 0, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.perc-info p {
+    font-family: "Play", sans-serif;
+    font-family: "BlenderPro-Book", sans-serif;
+    font-size: 13.5px;
+    margin-bottom: 8px;
+}
+.perc-info p.perc-txt1 {transition: all 0.1s  0.2s;}
+.perc-info p.perc-txt2 {transition: all 0.4s  0.14s;}
+.perc-info p.perc-txt3 {transition: all 0.1s  0.6s;}
+
+
+/* fade/show animation */
+@keyframes fadeAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:1; }
+    51%  { opacity:0; }
+    100% { opacity:0; }
+}
+@-o-keyframes fadeAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:1; }
+    51%  { opacity:0; }
+    100% { opacity:0; }
+}
+@-moz-keyframes fadeAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:1; }
+    51%  { opacity:0; }
+    100% { opacity:0; }
+}
+@-webkit-keyframes fadeAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:1; }
+    51%  { opacity:0; }
+    100% { opacity:0; }
+}
+.fade-animation {
+    -webkit-animation: fadeAnimation 1s infinite;
+    -moz-animation: fadeAnimation 1s infinite;
+    -o-animation: fadeAnimation 1s infinite;
+    animation: fadeAnimation 1s infinite;
+}
+
+
+/* animation marquee */
+.animation-marque-grow-block {
+    animation: animation-marque-grow-block 1s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+}
+@keyframes animation-marque-grow-block
+{
+    0% {height: 79px}
+    100% {height: 122px}
+}
+
+.marquee-show {opacity: 0}
+.animation-marque-show {
+    animation: animation-marque-show 0.2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2000ms;
+}
+@keyframes animation-marque-show
+{
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.animation-marque-bad-work {
+    animation: animation-marque-bad-work 10s linear infinite;
+    animation-delay: 400ms;
+}
+@keyframes animation-marque-bad-work
+{
+    0% {opacity: 0;  background: rgba(46,44,11,0.03);}
+    1% {opacity: 1; background: rgba(46,44,11,0.39);}
+    49% {opacity: 1; background: rgba(46,44,11,0.39);}
+
+    50% {opacity: 0; background: rgba(46,44,11,0.0);}
+    50.3% {opacity: 1; background: rgba(46,44,11,0.39);}
+    55% {opacity: 1; background: rgba(46,44,11,0.39);}
+
+    55.3% {opacity: 0.1; background: rgba(46,44,11,0.03);}
+    55.6% {opacity: 1; background: rgba(46,44,11,0.39);}
+
+    59% {opacity: 1; background: rgba(46,44,11,0.39);}
+    59.3% {opacity: 0.1; background: rgba(46,44,11,0.03);}
+    59.6% {opacity: 1; background: rgba(46,44,11,0.39);}
+
+    100% {opacity: 1; background: rgba(46,44,11,0.39);}
+}

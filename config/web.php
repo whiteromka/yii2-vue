@@ -4,6 +4,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
+    'language' => 'ru',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -15,6 +16,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'b0CJDD-i4PbRAXeqWvqrRtUnP9F5rQZI',
+            'baseUrl'=> '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -47,8 +49,14 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+
+                'course-record' => 'site/course-record',
+               '<action>' => 'site/<action>',
             ],
         ],
+//        'assetManager' => [
+//            'linkAssets' => true,
+//        ],
 
     ],
     'params' => $params,

@@ -14,6 +14,6 @@ class VueAsset extends AssetBundle
     ];
 
     public $css = [
-      //  'css/app.css',
+        'css/app.css',
     ];
 }

@@ -1,0 +1,65 @@
+.cyber-glitch-0 {
+    animation: cyber-glitch-0 5s linear infinite;
+}
+@keyframes cyber-glitch-0
+{
+    0% {filter: blur(0) brightness(100%) contrast(100%);}
+    2% {filter: blur(.05rem) brightness(120%) contrast(120%);}
+    4% {filter: blur(.10rem) brightness(150%) contrast(150%);}
+    6% {filter: blur(.20rem) brightness(170%) contrast(170%);}
+    8% {filter: blur(0) brightness(100%) contrast(100%);}
+    10% {filter: blur(0) brightness(100%) contrast(100%);}
+    60% {filter: blur(0) brightness(100%) contrast(100%);}
+    62% {filter: blur(.05rem) brightness(60%) contrast(100%);}
+    64% {filter: blur(.10rem) brightness(40%) contrast(100%);}
+    66% {filter: blur(0) brightness(100%) contrast(100%);}
+    68% {filter: blur(.05rem) brightness(60%) contrast(100%);}
+    70% {filter: blur(.10rem) brightness(40%) contrast(100%);}
+    72% {filter: blur(0) brightness(100%) contrast(100%);}
+    100% {filter: blur(0) brightness(100%) contrast(100%);}
+}
+
+.cyber-glitch-1 {
+    animation: cyber-glitch-1 5s linear infinite;
+}
+@keyframes cyber-glitch-1
+{
+    0% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    1% {transform: translate(0,0) skew(-3deg); filter: invert(0);}
+    2% {transform: translate(0,0) skew(3deg); filter: invert(0);}
+    3% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    60% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    61% {transform: translate(0,0) skew(-3deg); filter: invert(0.2);}
+    62% {transform: translate(0,0) skew(0deg); filter: invert(0.2);}
+    63% {transform: translate(0,0) skew(3deg); filter: invert(0.8);}
+    64% {transform: translate(0,0) skew(0deg); filter: invert(0.2);}
+    65% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+}
+
+
+/* square animation BG */
+@-webkit-keyframes bg-scrolling-reverse { 100% {background-position: 50px 50px;} }
+@-moz-keyframes bg-scrolling-reverse { 100% {background-position: 50px 50px;} }
+@-o-keyframes bg-scrolling-reverse { 100% {background-position: 50px 50px;} }
+@keyframes bg-scrolling-reverse { 100% {background-position: 50px 50px;} }
+@-webkit-keyframes bg-scrolling { 0% {background-position: 50px 50px;} }
+@-moz-keyframes bg-scrolling { 0% {background-position: 50px 50px;} }
+@-o-keyframes bg-scrolling { 0% {background-position: 50px 50px;} }
+@keyframes bg-scrolling { 0% {background-position: 50px 50px;} }
+.bg-cubes-ani {
+    /*background: url(../pic/gridbg_glow55.png) repeat 0 0;*/
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse 10s infinite;
+    -moz-animation: bg-scrolling-reverse 10s infinite;
+    -o-animation: bg-scrolling-reverse 10s infinite;
+    animation: bg-scrolling-reverse 10s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+
+
+
+

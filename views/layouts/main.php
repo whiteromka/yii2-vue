@@ -21,11 +21,10 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <!--    Tektur  Orbitron-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Play:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -33,52 +32,58 @@ AppAsset::register($this);
 <header>
     <?php
     NavBar::begin([
-        'brandLabel' => "<span class='xLabel'>X</span>Courses",
+        'brandLabel' => "<span class='d-none d-md-block d-lg-block d-xl-block fade-animation'>_</span>", /* <span class='xLabel'>X</span>Courses */
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+            'class' => 'navbar navbar-expand-md navbar-dark bg-dark_ fixed-top ',
         ],
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav f-play'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Фулстек', 'url' => ['/site/about']],
-            ['label' => 'Фронт', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Unity', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+            ['label' => 'Home', 'url' => ['/']],
+            ['label' => 'frontend', 'url' => ['/site/frontend']],
+            ['label' => 'fullstack', 'url' => ['/site/fullstack']],
+            ['label' => 'gamedev', 'url' => ['/site/gamedev']],
+            ['label' => 'faq', 'url' => ['/site/faq']],
+            ['label' => 'записаться', 'url' => ['/site/course-record']],
         ],
     ]);
     NavBar::end();
     ?>
 </header>
 
-<main role="main" class="flex-shrink-0">
-    <div class="container-fluid">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+<main role="main">
+    <div class="main-container_">
+        <div class="container-fluid" style="max-width: 1920px; min-height: 90vh">
+            <?= $content ?>
+        </div>
     </div>
+
 </main>
 
-<footer class="footer mt-auto py-3 text-muted">
+
+<div class="footer pt-40 pb-50">
     <div class="container">
-        <p class="float-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="float-right"><?= Yii::powered() ?></p>
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                    <li>Ром на GitHub: <a target="_blank" class="description-link" href="https://github.com/whiteromka">github.com</a></li>
+                    <li>Ром на GetMentor: <a target="_blank" class="description-link" href="https://getmentor.dev/mentor/roman-belov-2309">getmentor.dev</a></li>
+                    <li>Ром в Telegram: <a target="_blank" class="description-link" href="https://t.me/roman_belov_1989">@roman_belov_1989</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li> <span> Если хотите поработать со мной над проектом: <a target="_blank" class="description-link" href="https://t.me/roman_belov_1989">@roman_belov_1989</a></span></li>
+                    <li><span> Если хотите чтобы я поработал над вашим: <a target="_blank" class="description-link" href="https://t.me/roman_belov_1989">@roman_belov_1989</a></span></li>
+                    <li><span> Если Вы старовер и любите подолгу ждать ответов: <a class="description-link" href="mailto:whiteromka@yandex.ru">whiteromka@yandex.ru</a></span></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-</footer>
+</div>
 
 <?php $this->endBody() ?>
 </body>
