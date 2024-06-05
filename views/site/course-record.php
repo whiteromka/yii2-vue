@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="bracket bracket-blue-bl"></div>
                     <div class="bracket bracket-blue-br"></div>
                     <h4 class="d-none d-xl-block">success</h4>
-                    <p>Спасибо! Все хорохо! Когда наберется команда я свяжусь с Вами</p>
+                    <p>Спасибо! Все хорошо! Когда наберется команда я свяжусь с Вами</p>
                 </div>
             </div>
         <?php elseif(Yii::$app->session->hasFlash('isCanNotRecord')): ?>

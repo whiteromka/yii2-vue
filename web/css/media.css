@@ -1,5 +1,8 @@
 @media (max-width: 575.98px) {
-
+    .media-block-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 @media(max-width:767px) {
     .navbar {
@@ -12,5 +15,4 @@
         width: 100%;
         padding: 10px 0;
     }
-
 }

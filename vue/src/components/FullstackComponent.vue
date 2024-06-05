@@ -26,7 +26,7 @@
                         <p>Краткое описание: <span v-html="part.descr"></span></p>
                         <p>Кол-во уроков: {{ part.lessons }}</p>
                     </div>
-                    <div class="d-flex fw-w">
+                    <div class="d-flex media-block-container">
                         <div class="d-flex-item brackets-wrap cart-map"
                              v-for="(item, i) in part.courses" :key="i"
                              @mouseover="mouseoverCart(item)"

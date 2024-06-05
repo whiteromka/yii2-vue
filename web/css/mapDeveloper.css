@@ -84,3 +84,6 @@
     padding-left: 6px;
     margin: 6px 0px;
 }
+.media-block-container {
+    flex-wrap: wrap
+}

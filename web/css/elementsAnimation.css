@@ -331,9 +331,15 @@ body {
 .box-border-ani:hover {
     animation-play-state: paused;
 }
+/*.myPhoto-wrap:hover ~ .box-border-ani {*/
+/*    animation-play-state: paused;*/
+/*}*/
 @property --border-angle {
     syntax: "<angle>";
     inherits: true;
     initial-value: 0turn;
 }
 
+.box-border-ani-stoped {
+    animation-play-state: paused;
+}

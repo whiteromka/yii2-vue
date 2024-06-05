@@ -44,12 +44,13 @@
                                             <p class="rom-txt2" v-html="hello.myData.txt2"></p>
                                             <p class="rom-txt3" v-html="hello.myData.txt3"></p>
                                         </div>
-                                        <div class="vertical-label box-border-ani"> Teacher </div>
+                                        <div class="vertical-label box-border-ani teacher-label"> Teacher </div>
                                         <div class="myPhoto-wrap">
+<!--                                            <div class="vertical-label box-border-ani"> Teacher </div>-->
                                             <img :src="hello.pic" class="img-fluid cyber-glitch-0_ myPhoto" :alt="hello.myData.name">
                                         </div>
                                     </div>
-                                    <span class="perc-btn-roman">Roman</span>
+                                    <span class="perc-btn-roman" @click="toggleMyPhoto()">Roman</span>
                                     <div class="console-content d-none d-md-block d-lg-block d-xl-none">
                                         <br>
                                         <h4 style="padding-left: 10px">ЧТО НУЖНО</h4>
@@ -124,7 +125,7 @@
                                             <p class="perc-txt2" v-show="itemTextTimer.t2"> {{ item.txt2 }} </p>
                                             <p class="perc-txt3" v-show="itemTextTimer.t3"> {{ item.txt3 }} </p>
                                         </div>
-                                        <div class="vertical-label box-border-ani">{{ item.label }}</div>
+                                        <div class="vertical-label box-border-ani" :class="item.label+'Label'">{{ item.label }}</div>
                                         <img :src="item.pic" class="img-fluid" :alt="item.ru">
                                     </div>
                                     <a class="perc-btn" :href="item.link">
@@ -259,6 +260,13 @@ export default {
                 this.printingHeadText += firstChar
             }, speed)
         },
+        toggleMyPhoto() {
+            if (this.hello.myData.active) {
+                this.mouseleaveMyPhoto();
+            } else {
+                this.mouseoverMyPhoto();
+            }
+        },
         mouseoverMyPhoto() {
             this.hello.myData.active = true
             let romHead = document.querySelector('.rom-txt0');
@@ -269,10 +277,16 @@ export default {
             percTxt1.classList.add("rom-prop1");
             percTxt2.classList.add("rom-prop2");
             percTxt3.classList.add("rom-prop3");
+            // застопим анимацию лейбла
+            let label = document.querySelector('.teacher-label');
+            label.classList.add("box-border-ani-stoped");
            
         },
         mouseleaveMyPhoto() {
             this.hello.myData.active = false
+            // запустим анимацию лейбла
+            let label = document.querySelector('.teacher-label');
+            label.classList.remove("box-border-ani-stoped");
         },
         mouseoverPerc(title) {
             let perc = this.perc.find((item) => item.title == title);
@@ -281,6 +295,8 @@ export default {
             this.interval1 = setTimeout(() => {self.itemTextTimer.t1 = true}, 200)
             this.interval2 = setTimeout(() => {self.itemTextTimer.t2 = true}, 400)
             this.interval3 = setTimeout(() => {self.itemTextTimer.t3 = true}, 600)
+            let label = document.querySelector('.teacher-label');
+            label.classList.add("box-border-ani-stoped");
         },
         mouseleavePerc(title) {
             let perc = this.perc.find((item) => item.title == title);
